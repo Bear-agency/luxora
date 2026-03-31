@@ -1,0 +1,33 @@
+.private {
+  background: var(--color-paper-2);
+  color: var(--color-ink);
+  text-align: center;
+}
+
+.private .section-title { margin-bottom: 1.25rem; }
+
+.private-lead {
+  max-width: 38rem;
+  margin: 0 auto 2rem;
+  color: var(--color-ink-muted);
+}
+
+.private-pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.pill {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.55rem 1.1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  color: #9B7B28;
+  background: #FFFCF3;
+}

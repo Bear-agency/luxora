@@ -1,0 +1,49 @@
+.philosophy {
+  background: var(--color-bg);
+  text-align: center;
+  padding: clamp(5rem, 12vw, 7rem) 0;
+}
+
+.pull-quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.75rem, 4.5vw, 3.5rem);
+  line-height: 1.25;
+  max-width: 20ch;
+  margin: 0 auto 1.5rem;
+  color: var(--color-white);
+}
+
+.philosophy-support {
+  color: var(--color-text-muted);
+  max-width: 32rem;
+  margin: 0 auto 2.5rem;
+  font-size: 1rem;
+}
+
+.rule-diamond {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 400px;
+  margin-inline: auto;
+}
+
+.rule-diamond::before,
+.rule-diamond::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+  opacity: 0.6;
+}
+
+.rule-diamond span {
+  width: 10px;
+  height: 10px;
+  background: var(--color-gold);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
