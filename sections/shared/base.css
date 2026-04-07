@@ -495,6 +495,12 @@
       animation: visualFloat 9s ease-in-out infinite;
     }
     .industry-visual svg { width: 100%; height: 100%; display: block; }
+    .industry-visual img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
     .industry-block.reverse .industry-visual { animation-delay: 1.4s; }
     @keyframes visualFloat {
       0%, 100% { transform: translateY(0); }
