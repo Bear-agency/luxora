@@ -439,6 +439,26 @@
       font-size: 0.95rem;
     }
 
+    /* —— Card issuing —— */
+    .card-issuing {
+      background: var(--color-paper);
+      color: var(--color-ink);
+      border-top: 1px solid rgba(19, 39, 19, 0.08);
+      border-bottom: 1px solid rgba(19, 39, 19, 0.08);
+    }
+    .card-issuing-wrap {
+      max-width: 900px;
+      text-align: center;
+    }
+    .card-issuing .section-title {
+      margin-bottom: 1.25rem;
+    }
+    .card-issuing-copy {
+      margin: 0;
+      color: var(--color-ink-muted);
+      font-size: 1.02rem;
+    }
+
     /* —— Industries —— */
     .industries {
       background: var(--color-paper);
