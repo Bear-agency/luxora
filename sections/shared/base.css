@@ -765,6 +765,17 @@
       font-size: 0.8rem;
       color: var(--color-text-muted);
     }
+    .footer-legal {
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.45rem;
+    }
+    .footer-legal a {
+      color: var(--color-text-muted);
+      transition: color 0.2s;
+    }
+    .footer-legal a:hover { color: var(--color-white); }
     .footer-badges {
       display: flex;
       flex-wrap: wrap;
