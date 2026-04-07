@@ -25,7 +25,12 @@
       function initNavbar() {
         var nav = document.getElementById("nav");
         if (!nav) return;
+        var forceSolidNav = !!document.querySelector(".legal-page");
         function onScrollNav() {
+          if (forceSolidNav) {
+            nav.classList.add("is-scrolled");
+            return;
+          }
           nav.classList.toggle("is-scrolled", window.scrollY > NAV_SCROLLED_Y);
         }
         window.addEventListener("scroll", onScrollNav, { passive: true });
