@@ -781,6 +781,54 @@
       color: var(--color-text-muted);
     }
 
+    /* —— Legal pages (terms, privacy) —— */
+    .legal-page {
+      padding: calc(var(--nav-h) + 3rem) 0 clamp(4rem, 10vw, 6rem);
+      background: var(--color-paper);
+      color: var(--color-ink);
+      min-height: 60vh;
+    }
+    .legal-content {
+      max-width: 46rem;
+    }
+    .legal-content h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 2.5rem);
+      font-weight: 500;
+      margin: 0 0 0.5rem;
+      letter-spacing: -0.02em;
+    }
+    .legal-meta {
+      font-size: 0.85rem;
+      color: var(--color-ink-muted);
+      margin: 0 0 2.5rem;
+    }
+    .legal-content h2 {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin: 2rem 0 0.75rem;
+      color: var(--color-ink);
+    }
+    .legal-content p,
+    .legal-content li {
+      color: var(--color-ink-muted);
+      font-size: 0.98rem;
+      line-height: 1.65;
+    }
+    .legal-content p { margin: 0 0 1rem; }
+    .legal-content ul {
+      margin: 0 0 1rem 1.1rem;
+      padding: 0;
+    }
+    .legal-content li { margin-bottom: 0.4rem; }
+    .legal-content a {
+      color: #9B7B28;
+      text-decoration: underline;
+      text-underline-offset: 0.15em;
+    }
+    .legal-content a:hover { color: var(--color-gold); }
+
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       *, *::before, *::after {
