@@ -787,6 +787,19 @@
       font-size: 0.9rem;
       color: var(--color-text-muted);
     }
+    .footer-company-legal {
+      margin-top: 1rem;
+      max-width: 460px;
+      font-size: 0.82rem;
+      line-height: 1.55;
+      color: var(--color-text-muted);
+    }
+    .footer-company-legal p {
+      margin: 0 0 0.75rem;
+    }
+    .footer-company-legal p:last-child {
+      margin-bottom: 0;
+    }
 
     /* —— Legal pages (terms, privacy) —— */
     .legal-page {
