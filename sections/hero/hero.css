@@ -51,14 +51,10 @@
 }
 
 .hero h1 .word {
-  display: inline-block;
-  opacity: 0;
-  transform: translateY(0.4em);
-  animation: wordIn 0.7s var(--ease-out) forwards;
-}
-
-@keyframes wordIn {
-  to { opacity: 1; transform: translateY(0); }
+  display: inline;
+  opacity: 1;
+  transform: none;
+  animation: none;
 }
 
 .hero-sub {
