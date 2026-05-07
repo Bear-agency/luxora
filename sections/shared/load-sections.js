@@ -1,7 +1,5 @@
 (function () {
   var ASSET_VERSION = "20260507-hero-title-plain-text";
-  var HERO_LINE_1 = "Global Financial Infrastructure";
-  var HERO_LINE_2 = "for Modern Businesses";
 
   function withVersion(path) {
     return path + (path.indexOf("?") === -1 ? "?" : "&") + "v=" + encodeURIComponent(ASSET_VERSION);
@@ -40,12 +38,6 @@
     });
   }
 
-  function enforcePlainHeroTitle() {
-    var heroTitle = document.getElementById("hero-title");
-    if (!heroTitle) return;
-    heroTitle.innerHTML = HERO_LINE_1 + "<br>" + HERO_LINE_2;
-  }
-
   /** Scroll to #id after async partials replace DOM (fixes index#contact, terms#…, privacy#…). */
   function scrollToHashIfNeeded() {
     var hash = window.location.hash;
@@ -73,12 +65,10 @@
 
   loadPartials()
     .then(function () {
-      enforcePlainHeroTitle();
       scrollToHashWithRetry();
       return new Promise(function (resolve) {
         requestAnimationFrame(function () {
           requestAnimationFrame(function () {
-            enforcePlainHeroTitle();
             scrollToHashIfNeeded();
             resolve();
           });
@@ -87,7 +77,6 @@
     })
     .then(loadMainScript)
     .then(function () {
-      enforcePlainHeroTitle();
       window.addEventListener("hashchange", function () {
         scrollToHashIfNeeded();
       });
