@@ -1,26 +1,6 @@
     (function () {
-      var HERO_LINE_1 = "Global Financial Infrastructure";
-      var HERO_LINE_2 = "for Modern Businesses";
-      var HERO_WORD_DELAY_S = 0.08;
       var NAV_SCROLLED_Y = 24;
       var PARTICLE_COUNT = 8;
-
-      function renderHeroHeadline() {
-        var heroTitle = document.getElementById("hero-title");
-        if (!heroTitle) return;
-        var words = (HERO_LINE_1 + " " + HERO_LINE_2).split(" ");
-        heroTitle.textContent = "";
-        words.forEach(function (w, i) {
-          var span = document.createElement("span");
-          span.className = "word";
-          span.textContent = w;
-          span.style.animationDelay = HERO_WORD_DELAY_S * i + "s";
-          heroTitle.appendChild(span);
-          if (i === HERO_LINE_1.split(" ").length - 1) {
-            heroTitle.appendChild(document.createElement("br"));
-          }
-        });
-      }
 
       function initNavbar() {
         var nav = document.getElementById("nav");
@@ -146,7 +126,6 @@
         });
       }
 
-      renderHeroHeadline();
       initNavbar();
       initScrollButtons();
       initParticles();
