@@ -1,6 +1,12 @@
 (function () {
+  var ASSET_VERSION = "20260507-hero-title-fix";
+
+  function withVersion(path) {
+    return path + (path.indexOf("?") === -1 ? "?" : "&") + "v=" + encodeURIComponent(ASSET_VERSION);
+  }
+
   function fetchPartial(path) {
-    return fetch(path).then(function (res) {
+    return fetch(withVersion(path), { cache: "no-store" }).then(function (res) {
       if (!res.ok) throw new Error("Failed to load " + path);
       return res.text();
     });
@@ -25,7 +31,7 @@
   function loadMainScript() {
     return new Promise(function (resolve, reject) {
       var script = document.createElement("script");
-      script.src = "sections/shared/main.js";
+      script.src = withVersion("sections/shared/main.js");
       script.onload = resolve;
       script.onerror = reject;
       document.body.appendChild(script);
